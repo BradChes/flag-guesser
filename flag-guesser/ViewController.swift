@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var countries = [String]()
     var score = 0
     var correctAnswer = 0
+    var questionCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,32 +34,38 @@ class ViewController: UIViewController {
     }
 
     func askQuestion(action: UIAlertAction! = nil) {
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
-        
-        button1.setImage(UIImage(named: countries[0]), for: .normal)
-        button2.setImage(UIImage(named: countries[1]), for: .normal)
-        button3.setImage(UIImage(named: countries[2]), for: .normal)
-        
-        title = "\(countries[correctAnswer].uppercased())? Score: \(score)"
+        if questionCount <= 11 {
+            countries.shuffle()
+            correctAnswer = Int.random(in: 0...2)
+            
+            button1.setImage(UIImage(named: countries[0]), for: .normal)
+            button2.setImage(UIImage(named: countries[1]), for: .normal)
+            button3.setImage(UIImage(named: countries[2]), for: .normal)
+            
+            title = "\(countries[correctAnswer].uppercased())? Score: \(score)"
+            
+            questionCount += 1
+        }
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        var title: String
-        
         if sender.tag == correctAnswer {
-            title = "Correct!"
             score += 1
         } else {
-            title = "Wrong! That's the flag of \(countries[sender.tag].uppercased())"
             score -= 1
         }
         
-        let ac = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
+        askQuestion()
         
-        ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
-        
-        present(ac, animated: true)
+        if questionCount == 11 {
+            let ac = UIAlertController(title: "GG", message: "Your final score is \(score)", preferredStyle: .alert)
+            
+            ac.addAction(UIAlertAction(title: "Restart", style: .default, handler: askQuestion))
+            
+            present(ac, animated: true)
+            questionCount = 0
+            score = 0
+        }
     }
 }
 
