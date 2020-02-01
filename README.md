@@ -20,9 +20,10 @@ Game that shows some random flags to users; Asks them which one belongs to a cou
 - Random numbers
 - UIImage
 - UIAlertController
+- UIBarButtonItem
 
 ## Demonstration
-Small demonstration as to what the application does when on device.
+Small demonstration as to what the game does when on device.
 </br>
 <p align="center">
 <img src="demo/flag-guesser.gif" alt="Application demonstration"
