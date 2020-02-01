@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C61EAE6023E096FB00D86241 /* flag-guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flag-guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61EAE6023E096FB00D86241 /* Flag Guesser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flag Guesser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61EAE6323E096FB00D86241 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C61EAE6523E096FB00D86241 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C61EAE6723E096FB00D86241 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		C61EAE6123E096FB00D86241 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C61EAE6023E096FB00D86241 /* flag-guesser.app */,
+				C61EAE6023E096FB00D86241 /* Flag Guesser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = "flag-guesser";
 			productName = "flag-guesser";
-			productReference = C61EAE6023E096FB00D86241 /* flag-guesser.app */;
+			productReference = C61EAE6023E096FB00D86241 /* Flag Guesser.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.flag-guesser";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flag Guesser";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.flag-guesser";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Flag Guesser";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
