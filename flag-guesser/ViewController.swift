@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             button2.setImage(UIImage(named: countries[1]), for: .normal)
             button3.setImage(UIImage(named: countries[2]), for: .normal)
             
-            title = "\(countries[correctAnswer].uppercased())? Score: \(score)"
+            title = "\(countries[correctAnswer].uppercased())?"
             
             questionCount += 1
         }
@@ -66,6 +66,16 @@ class ViewController: UIViewController {
             questionCount = 0
             score = 0
         }
+    }
+    
+    @IBAction func barButtonTapped(_ sender: Any) {
+        let ac = UIAlertController(title: "Current score", message: "\(score)", preferredStyle: .alert)
+
+        ac.addAction(UIAlertAction(title: "Close", style: .cancel, handler: { _ in
+            return
+        }))
+
+        present(ac, animated: true)
     }
 }
 
