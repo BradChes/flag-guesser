@@ -49,6 +49,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: UIButton) {
+        let animationDuration = 0.3
+        let animationDelay = 0.0
+        
+        UIView.animate(withDuration: animationDuration, delay: animationDelay, usingSpringWithDamping: 0.1, initialSpringVelocity: 5, options:[], animations: {
+                sender.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        }) { (finished) in
+            UIView.animate(withDuration: animationDuration, delay: animationDelay, options:[], animations: {
+                            sender.transform = .identity
+                        }, completion: nil)
+        }
+    
         if sender.tag == correctAnswer {
             score += 1
         } else {
